@@ -1,0 +1,10 @@
+services:
+  emm-site-dev:
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules # Anonymous volume to prevent local modules from overwriting container modules
+    environment:
+      - CLOUDFLARE_API_TOKEN=${CLOUDFLARE_API_TOKEN}
+    # This keeps the container running so you can exec into it
+    command: tail -f /dev/null
