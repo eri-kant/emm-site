@@ -7,12 +7,12 @@
     "build": "astro build"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^6.0.2",
     "astro": "^4.0.0",
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.2",
+    "@tailwindcss/vite": "^4.2.2",
     "typescript": "^6.0.2"
   }
 }

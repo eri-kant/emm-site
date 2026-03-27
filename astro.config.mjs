@@ -1,6 +1,9 @@
 import { defineConfig } from 'astro/config';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  // No integrations needed! Astro 6 + Vite handles Tailwind v4 automatically.
+  vite: {
+    plugins: [tailwindcss()],
+  },
   output: 'static'
 });
