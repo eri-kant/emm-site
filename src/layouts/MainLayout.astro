@@ -1,0 +1,26 @@
+---
+/**
+ * MainLayout.astro
+ * The master wrapper for all pages. 
+ * This is where we link the global styles and set the theme.
+ */
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+}
+
+const { title = "NASA EMM" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" data-theme="corporate">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen">
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,17 @@
+---
+const { title, subtitle, ctaText } = Astro.props;
+---
+
+<div class="hero min-h-[70vh] bg-base-200 rounded-3xl overflow-hidden my-8 shadow-xl border border-base-300">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold text-base-content tracking-tight">{title}</h1>
+      <p class="py-6 text-lg opacity-80 leading-relaxed">
+        {subtitle}
+      </p>
+      <button class="btn btn-primary btn-wide shadow-lg hover:scale-105 transition-transform">
+        {ctaText}
+      </button>
+    </div>
+  </div>
+</div>

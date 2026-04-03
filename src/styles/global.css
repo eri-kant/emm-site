@@ -1,1 +1,16 @@
-@import "tailwindcss";
+/* * global.css
+ * Tailwind CSS Directives for NASA EMM Project
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Wix-quality defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased bg-base-100 text-base-content;
+  font-family: 'Inter', sans-serif;
+}
