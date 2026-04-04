@@ -1,12 +1,28 @@
----
-import MainLayout from '../layouts/MainLayout.astro';
-import Hero from '../components/Hero.astro';
----
+<section class="py-20 bg-base-100">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4">An Inclusive Incubator</h2>
+      <p class="text-xl opacity-70">Leveraging media technology to bridge the gap between sectors.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="p-8 border-t-4 border-primary bg-base-200 rounded-b-xl shadow-sm">
+        <h3 class="text-2xl font-bold mb-3">Creative Services</h3>
+        <p class="mb-4">For-profit media production and tech consulting. This fuels our mission.</p>
+        <span class="badge badge-primary">Income Stream</span>
+      </div>
 
-<MainLayout title="Welcome | NASA EMM">
-  <Hero 
-    title="EMM" 
-    subtitle="Modern Engineering Management for the Next Generation." 
-    ctaText="Explore Mission" 
-  />
-</MainLayout>
+      <div class="p-8 border-t-4 border-secondary bg-base-200 rounded-b-xl shadow-sm">
+        <h3 class="text-2xl font-bold mb-3">Resource Sharing</h3>
+        <p class="mb-4">Free tools, knowledge bases, and media assets for local charities.</p>
+        <span class="badge badge-secondary">Knowledge Hub</span>
+      </div>
+
+      <div class="p-8 border-t-4 border-accent bg-base-200 rounded-b-xl shadow-sm">
+        <h3 class="text-2xl font-bold mb-3">Community Tech</h3>
+        <p class="mb-4">Subsidized hosting and digital infrastructure for arts organizations.</p>
+        <span class="badge badge-accent">Infrastructure</span>
+      </div>
+    </div>
+  </div>
+</section>
