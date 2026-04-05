@@ -1,14 +1,14 @@
 ---
 // src/pages/index.astro
 // Experimentaux Médias Montréal - 2026 Sovereignty Lab
-// Designed for: Zero-JS, High Privacy, Terminal Aesthetic
+// Future-Proof Version: Flexbox Layout + Internalized Styles
 ---
 
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
 		<title>EMM | Souveraineté Numérique Montréal</title>
 		<meta name="description" content="Laboratoire de justice technologique à Montréal. Codé par une architecte de 33 ans pour le bien commun." />
@@ -23,14 +23,17 @@
 		</header>
 
 		<main class="container">
-			<section class="hero">
+			<section class="hero-wrapper">
 				<div class="question-box">
 					<h1>Et si la technologie servait (enfin) le bien commun ?<span class="cursor"></span></h1>
 				</div>
-				<p class="subtitle">
-					À 33 ans, j'ai cessé d'attendre la réponse. <br />
-					<strong>J'ai commencé à la bâtir.</strong>
-				</p>
+				
+				<div class="architect-intro">
+					<p class="subtitle">
+						À 33 ans, j'ai cessé d'attendre la réponse. <br />
+						<strong>J'ai commencé à la bâtir.</strong>
+					</p>
+				</div>
 			</section>
 
 			<section class="section-box">
@@ -71,13 +74,13 @@
 			<section id="logs" class="logs">
 				<h2>Terminal Output // Flux de Construction</h2>
 				<div class="log-entry">
+					<span class="timestamp">[2026-04-05T03:35:00]</span> > Correctif : Résolution de la collision des calques (CSS Flexbox).
+				</div>
+				<div class="log-entry">
 					<span class="timestamp">[2026-04-05T03:22:11]</span> > Migration vers Astro terminée. Performance : 100/100.
 				</div>
 				<div class="log-entry">
 					<span class="timestamp">[2026-04-02T14:05:44]</span> > Initialisation du protocole d'anonymat radical.
-				</div>
-				<div class="log-entry">
-					<span class="timestamp">[2026-03-28T09:12:00]</span> > Premier audit de biais IA pour une PME montréalaise réussi.
 				</div>
 			</section>
 		</main>
@@ -96,6 +99,7 @@
 				--border: #222;
 			}
 
+			/* Reset & Base */
 			body {
 				background-color: var(--bg);
 				color: var(--text);
@@ -103,6 +107,7 @@
 				margin: 0;
 				padding: 0;
 				line-height: 1.6;
+				overflow-x: hidden;
 			}
 
 			.container {
@@ -112,26 +117,35 @@
 			}
 
 			header { padding: 2rem 1.5rem; font-size: 0.8rem; }
+			
 			.status-dot { 
 				display: inline-block; width: 8px; height: 8px; 
 				background: var(--accent); border-radius: 50%; margin-right: 8px; 
 				box-shadow: 0 0 5px var(--accent);
 			}
 
-			.hero { padding: 4rem 0; text-align: left; }
-			
+			/* --- FIX START: Hero Wrapper --- */
+			.hero-wrapper { 
+				display: flex;
+				flex-direction: column;
+				gap: 2.5rem; /* Forces space between elements, preventing overlap */
+				padding: 4rem 0;
+			}
+
 			.question-box {
 				background: #111;
 				padding: 2.5rem;
 				border-left: 4px solid var(--accent);
-				margin-bottom: 2rem;
 				animation: pulse-glow 4s infinite ease-in-out;
+				/* Ensure box sizing includes padding to prevent overflow */
+				box-sizing: border-box; 
 			}
+			/* --- FIX END --- */
 
-			h1 { font-size: 1.8rem; margin: 0; line-height: 1.2; color: var(--accent); }
+			h1 { font-size: 1.8rem; margin: 0; line-height: 1.4; color: var(--accent); }
 			h2, h3 { color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
 			
-			.subtitle { font-size: 1.2rem; color: #aaa; }
+			.subtitle { font-size: 1.2rem; color: #999; margin: 0; }
 			.label { font-size: 0.7rem; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; }
 
 			.section-box {
@@ -148,7 +162,7 @@
 			li::before { content: "> "; color: var(--accent); }
 			li { margin-bottom: 0.5rem; }
 
-			.actions { display: flex; gap: 1rem; margin-top: 2rem; }
+			.actions { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
 
 			.btn {
 				padding: 0.8rem 1.5rem;
@@ -156,20 +170,20 @@
 				color: var(--accent);
 				text-decoration: none;
 				font-weight: bold;
-				transition: 0.3s ease;
+				transition: 0.2s ease-in-out;
 			}
-			.btn:hover { background: var(--accent); color: var(--bg); }
-			.btn.ghost { border-color: #555; color: #888; }
+			.btn:hover { background: var(--accent); color: var(--bg); box-shadow: 0 0 15px var(--accent-glow); }
+			.btn.ghost { border-color: #444; color: #888; }
 			.btn.ghost:hover { border-color: var(--text); color: var(--text); }
 
-			.logs { padding: 2rem 0; border-top: 1px solid var(--border); }
-			.log-entry { font-size: 0.85rem; margin-bottom: 0.8rem; font-family: monospace; color: #999; }
-			.timestamp { color: #555; }
+			.logs { padding: 2rem 0; border-top: 1px solid var(--border); margin-top: 2rem; }
+			.log-entry { font-size: 0.85rem; margin-bottom: 0.8rem; color: #777; }
+			.timestamp { color: #444; }
 
 			/* Animations */
 			@keyframes pulse-glow {
-				0%, 100% { box-shadow: 0 0 10px var(--accent-glow); border-left-color: var(--accent-muted); }
-				50% { box-shadow: 0 0 25px var(--accent-glow); border-left-color: var(--accent); }
+				0%, 100% { box-shadow: 0 0 8px var(--accent-glow); border-left-color: var(--accent-muted); }
+				50% { box-shadow: 0 0 20px var(--accent-glow); border-left-color: var(--accent); }
 			}
 
 			.cursor {
@@ -179,16 +193,16 @@
 			}
 			@keyframes blink { from, to { opacity: 0; } 50% { opacity: 1; } }
 
-			/* Scanlines Overlay */
+			/* CRT Scanline Overlay */
 			.scanlines {
 				position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-				background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
-							linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
-				background-size: 100% 4px, 3px 100%;
-				pointer-events: none; z-index: 100;
+				background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%),
+							linear-gradient(90deg, rgba(255, 0, 0, 0.01), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.01));
+				background-size: 100% 3px, 3px 100%;
+				pointer-events: none; z-index: 999;
 			}
 
-			footer { padding: 4rem 0; font-size: 0.7rem; color: #444; border-top: 1px solid var(--border); text-align: center; }
+			footer { padding: 4rem 0; font-size: 0.7rem; color: #333; border-top: 1px solid var(--border); text-align: center; }
 		</style>
 	</body>
 </html>
