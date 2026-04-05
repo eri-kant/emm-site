@@ -1,41 +1,194 @@
-<section id="architect" class="py-24 bg-black border-b border-white/5">
-  <div class="max-w-4xl mx-auto px-6">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-      
-      <div class="md:col-span-4 flex justify-center">
-        <div class="w-48 h-48 border border-primary/30 rounded-full flex items-center justify-center relative overflow-hidden group">
-          <div class="absolute inset-0 bg-primary/5 animate-pulse"></div>
-          <code class="text-primary text-4xl font-mono tracking-tighter">ID:033</code>
-        </div>
-      </div>
+---
+// src/pages/index.astro
+// Experimentaux Médias Montréal - 2026 Sovereignty Lab
+// Designed for: Zero-JS, High Privacy, Terminal Aesthetic
+---
 
-      <div class="md:col-span-8">
-        <h2 class="text-3xl font-bold text-white mb-6 tracking-tight">
-          Pourquoi l'anonymat. Pourquoi 33 ans.
-        </h2>
-        
-        <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
-          <p>
-            Dans une industrie obsédée par le paraître, je mise sur la <span class="text-white">compétence</span> et la <span class="text-white">logique</span> plutôt que sur l'identité. Si vous ne voyez pas mon visage, vous pouvez vous projeter dans le travail.
-          </p>
-          
-          <div class="collapse collapse-plus bg-white/5 rounded-none border border-white/10">
-            <input type="radio" name="architect-accordion" checked="checked" /> 
-            <div class="collapse-title text-xl font-medium text-white">La souveraineté comme fonctionnalité</div>
-            <div class="collapse-content text-sm">
-              <p>En tant que fondatrice soucieuse de la cybersécurité, je documente mon parcours complet de reconversion sans sacrifier ma propre souveraineté des données.</p>
-            </div>
-          </div>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>EMM | Souveraineté Numérique Montréal</title>
+		<meta name="description" content="Laboratoire de justice technologique à Montréal. Codé par une architecte de 33 ans pour le bien commun." />
+	</head>
+	<body>
+		<div class="scanlines"></div>
+		
+		<header class="container">
+			<div class="system-status">
+				<span class="status-dot"></span> [ EMM_LAB_v2026.sys ]
+			</div>
+		</header>
 
-          <div class="collapse collapse-plus bg-white/5 rounded-none border border-white/10">
-            <input type="radio" name="architect-accordion" /> 
-            <div class="collapse-title text-xl font-medium text-white">Le pivot de 33 ans</div>
-            <div class="collapse-content text-sm">
-              <p>Je suis la preuve qu'il n'est jamais trop tard pour orchestrer les machines. Je construis en public pour montrer à chaque travailleur déplacé comment reprendre le contrôle de son agence numérique.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+		<main class="container">
+			<section class="hero">
+				<div class="question-box">
+					<h1>Et si la technologie servait (enfin) le bien commun ?<span class="cursor"></span></h1>
+				</div>
+				<p class="subtitle">
+					À 33 ans, j'ai cessé d'attendre la réponse. <br />
+					<strong>J'ai commencé à la bâtir.</strong>
+				</p>
+			</section>
+
+			<section class="section-box">
+				<h2>L'Architecte (Anonyme)</h2>
+				<p>
+					Je documente ma reconversion radicale dans un marché en mutation. 
+					Je reste anonyme pour protéger ma sécurité et pour que ce projet appartienne à la communauté, pas à un visage. 
+					Mon travail prouve qu'à 33 ans, on ne subit pas l'IA : <strong>on l'orchestre.</strong>
+				</p>
+				<div class="actions">
+					<a href="#logs" class="btn">Consulter les Build Logs</a>
+					<a href="/manifeste" class="btn ghost">Le Manifeste</a>
+				</div>
+			</section>
+
+			<div class="grid">
+				<section class="section-box">
+					<h3>Moteur de Revenus</h3>
+					<p class="label">Souveraineté Digitale</p>
+					<ul>
+						<li>Audit de conformité Loi 14 (IA)</li>
+						<li>Cybersécurité pour OBNL</li>
+						<li>Souveraineté des données locales</li>
+					</ul>
+				</section>
+
+				<section class="section-box">
+					<h3>Moteur de Justice</h3>
+					<p class="label">Enrichissement Communautaire</p>
+					<ul>
+						<li>Financement Arts & Culture</li>
+						<li>Bourse d'Échange d'Abondance</li>
+						<li>Incubateur Justice-Orienté</li>
+					</ul>
+				</section>
+			</div>
+
+			<section id="logs" class="logs">
+				<h2>Terminal Output // Flux de Construction</h2>
+				<div class="log-entry">
+					<span class="timestamp">[2026-04-05T03:22:11]</span> > Migration vers Astro terminée. Performance : 100/100.
+				</div>
+				<div class="log-entry">
+					<span class="timestamp">[2026-04-02T14:05:44]</span> > Initialisation du protocole d'anonymat radical.
+				</div>
+				<div class="log-entry">
+					<span class="timestamp">[2026-03-28T09:12:00]</span> > Premier audit de biais IA pour une PME montréalaise réussi.
+				</div>
+			</section>
+		</main>
+
+		<footer class="container">
+			<p>© 2026 Experimentaux Médias Montréal. Aucun traqueur. Souveraineté totale.</p>
+		</footer>
+
+		<style>
+			:root {
+				--bg: #0a0a0a;
+				--text: #e0e0e0;
+				--accent: #00ff41;
+				--accent-muted: #008f11;
+				--accent-glow: rgba(0, 255, 65, 0.15);
+				--border: #222;
+			}
+
+			body {
+				background-color: var(--bg);
+				color: var(--text);
+				font-family: 'Courier New', Courier, monospace;
+				margin: 0;
+				padding: 0;
+				line-height: 1.6;
+			}
+
+			.container {
+				max-width: 850px;
+				margin: 0 auto;
+				padding: 0 1.5rem;
+			}
+
+			header { padding: 2rem 1.5rem; font-size: 0.8rem; }
+			.status-dot { 
+				display: inline-block; width: 8px; height: 8px; 
+				background: var(--accent); border-radius: 50%; margin-right: 8px; 
+				box-shadow: 0 0 5px var(--accent);
+			}
+
+			.hero { padding: 4rem 0; text-align: left; }
+			
+			.question-box {
+				background: #111;
+				padding: 2.5rem;
+				border-left: 4px solid var(--accent);
+				margin-bottom: 2rem;
+				animation: pulse-glow 4s infinite ease-in-out;
+			}
+
+			h1 { font-size: 1.8rem; margin: 0; line-height: 1.2; color: var(--accent); }
+			h2, h3 { color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+			
+			.subtitle { font-size: 1.2rem; color: #aaa; }
+			.label { font-size: 0.7rem; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; }
+
+			.section-box {
+				border: 1px solid var(--border);
+				padding: 2rem;
+				margin-bottom: 2rem;
+				background: rgba(255,255,255,0.02);
+			}
+
+			.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+			@media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+
+			ul { list-style: none; padding: 0; }
+			li::before { content: "> "; color: var(--accent); }
+			li { margin-bottom: 0.5rem; }
+
+			.actions { display: flex; gap: 1rem; margin-top: 2rem; }
+
+			.btn {
+				padding: 0.8rem 1.5rem;
+				border: 1px solid var(--accent);
+				color: var(--accent);
+				text-decoration: none;
+				font-weight: bold;
+				transition: 0.3s ease;
+			}
+			.btn:hover { background: var(--accent); color: var(--bg); }
+			.btn.ghost { border-color: #555; color: #888; }
+			.btn.ghost:hover { border-color: var(--text); color: var(--text); }
+
+			.logs { padding: 2rem 0; border-top: 1px solid var(--border); }
+			.log-entry { font-size: 0.85rem; margin-bottom: 0.8rem; font-family: monospace; color: #999; }
+			.timestamp { color: #555; }
+
+			/* Animations */
+			@keyframes pulse-glow {
+				0%, 100% { box-shadow: 0 0 10px var(--accent-glow); border-left-color: var(--accent-muted); }
+				50% { box-shadow: 0 0 25px var(--accent-glow); border-left-color: var(--accent); }
+			}
+
+			.cursor {
+				display: inline-block; width: 12px; height: 1.2rem;
+				background: var(--accent); margin-left: 8px;
+				vertical-align: middle; animation: blink 1s step-end infinite;
+			}
+			@keyframes blink { from, to { opacity: 0; } 50% { opacity: 1; } }
+
+			/* Scanlines Overlay */
+			.scanlines {
+				position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+				background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+							linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+				background-size: 100% 4px, 3px 100%;
+				pointer-events: none; z-index: 100;
+			}
+
+			footer { padding: 4rem 0; font-size: 0.7rem; color: #444; border-top: 1px solid var(--border); text-align: center; }
+		</style>
+	</body>
+</html>
